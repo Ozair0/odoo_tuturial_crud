@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
 
-
 class car_info(models.Model):
     _name = 'car.car'
     _description = 'Cars Model'

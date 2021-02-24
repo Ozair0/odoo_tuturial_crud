@@ -16,5 +16,6 @@
         'views/display_cars.xml',
         'views/create_car.xml',
         'views/update_car.xml',
+        'views/product_view_inherit.xml',
     ],
 }

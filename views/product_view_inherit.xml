@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="product_view_inherit" name="Product View Inherit" inherit_id="website_sale.product">
+    // use replace with $0 to wrap a tag
+        <!-- <xpath expr="//div[@class='row'][2]" position="replace">
+            <div class="col-12">$0</div>
+        </xpath> -->
+    // use attributes to add classes or other attributes
+    <xpath expr="//section[@id='product_detail']" position="attributes">
+            // ADD
+            <attribute name="t-attf-class" separator=" " remove="my_class" />
+            // Remove Only the you want to
+            <!-- <attribute name="t-attf-class" separator=" " remove="container" /> -->
+            // Remove ALL
+            <!-- <attribute name="t-attf-class" /> -->
+            
+    </xpath>
+    </template>
+
+</odoo>
