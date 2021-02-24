@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="display_cars" name="Cars">
+        <t t-call="website.layout">
+
+            <div class="container">
+                <h1>Cars</h1>
+                <a href="/cars/create" class="btn btn-primary"><i class="fa fa-plus-circle"/> Create a new car</a>
+            
+            <ul>
+               <t t-foreach="cars" t-as="car">
+                   <li>Name: <t t-esc="car.name"/>, Number Of Doors: <t t-esc="car.doors_number"/>, Horse Power: <t t-esc="car.horse_power"/> : <a class="btn btn-secondary mt-1" t-attf-href="/cars/update?id=#{car.id}"><i class="fa fa-pencil" /> Update</a> : <a class="btn btn-danger mt-1" t-attf-href="/cars/delete?id=#{car.id}"><i class="fa fa-pencil" /> Delete</a></li>
+               </t>
+            </ul>
+            </div>
+
+        </t>
+    </template>
+
+</odoo>

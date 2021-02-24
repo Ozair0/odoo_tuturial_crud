@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="update_car" name="Cars">
+        <t t-call="website.layout">
+
+            <div class="container">
+                <h2>Update Car</h2>
+                <form action="/cars/update" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="id" t-att-value="car.id"/>
+                    <label>
+                        Name
+                    </label>
+                    <input class="form-control" name="name" type="text" placeholder="Name" t-att-value="car.name" />
+                    <label>
+                        Number Of Doors
+                    </label>
+                    <input class="form-control" name="doors_number" type="number" placeholder="Number Of Doors" t-att-value="car.doors_number" />
+                    <label>
+                        Horse Power
+                    </label>
+                    <input class="form-control" name="horse_power" type="number" placeholder="Horse Power" t-att-value="car.horse_power"/>
+
+                    <button class="btn btn-primary mt-2" type="submit">Update</button>
+                </form>
+            </div>
+
+        </t>
+    </template>
+
+</odoo>

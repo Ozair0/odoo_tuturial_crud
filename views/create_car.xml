@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="create_car" name="Cars">
+        <t t-call="website.layout">
+
+            <div class="container">
+                <h2>Create Car</h2>
+                <form action="/cars/create" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <label>
+                        Name
+                    </label>
+                    <input class="form-control" name="name" type="text" placeholder="Name" />
+                    <label>
+                        Number Of Doors
+                    </label>
+                    <input class="form-control" name="doors_number" type="number" placeholder="Number Of Doors" />
+                    <label>
+                        Horse Power
+                    </label>
+                    <input class="form-control" name="horse_power" type="number" placeholder="Horse Power" />
+
+                    <button class="btn btn-primary mt-2" type="submit">Create</button>
+                </form>
+            </div>
+
+        </t>
+    </template>
+
+</odoo>
